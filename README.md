@@ -84,6 +84,15 @@ my/test/topic|{"foo": "bar", "quz": 22.13}
 the tool will split the sent line as topic + message and send it to a broker.
 
 
+---
+
+*NOTE*
+Application is set to exit on CTLR+C
+It listens for interrupt, kill, and some other signals.
+If the TCP connection is still open in other console the application will wait on connection to be closed before exiting.
+So if you have made publish attempts with netcat, telnet, etc.. be sure to close the connection before exiting the running tool.
+
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details
